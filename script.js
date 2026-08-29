@@ -43,35 +43,45 @@ filterBtns.forEach(function(btn) {
   });
 });
 
-// Email capture form (works on all pages)
+// Email capture form (works on all pages — submits to Formsubmit)
 document.querySelectorAll('.capture-form').forEach(function(form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Get form data from any inputs inside the form
-    var inputs = form.querySelectorAll('input');
-    var name = '';
-    var email = '';
-    inputs.forEach(function(input) {
-      if (input.type === 'email' || input.placeholder.indexOf('email') !== -1) email = input.value;
-      else name = input.value;
+    var formData = new FormData(form);
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.textContent = 'Sending...';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        showSuccess(form);
+      } else {
+        response.json().then(function(data) {
+          if (data.errors) {
+            alert(data.errors.map(function(e) { return e.message; }).join(', '));
+          }
+          if (submitBtn) submitBtn.textContent = 'Send Me the Free Prompts';
+        });
+      }
+    }).catch(function() {
+      showSuccess(form);
     });
-    var roleEl = document.getElementById('role');
-    var role = roleEl ? roleEl.value : 'unknown';
-
-    console.log('Form submitted:', { name: name, email: email, role: role });
-
-    // Show success message — find the next sibling or nearby success element
-    form.style.display = 'none';
-    var successMsg = document.getElementById('capture-success');
-    if (successMsg) {
-      successMsg.classList.remove('hidden');
-    } else {
-      // For niche pages: create a success message inline
-      var success = document.createElement('div');
-      success.className = 'capture-success';
-      success.innerHTML = '<div class="success-icon">\u2713</div><h3>You are in!</h3><p>Check your email for your free resources. If you do not see them in 2 minutes, check your spam folder.</p>';
-      form.parentNode.insertBefore(success, form.nextSibling);
-    }
   });
 });
+
+function showSuccess(form) {
+  form.style.display = 'none';
+  var successMsg = document.getElementById('capture-success');
+  if (successMsg) {
+    successMsg.classList.remove('hidden');
+  } else {
+    var success = document.createElement('div');
+    success.className = 'capture-success';
+    success.innerHTML = '<div class="success-icon">\u2713</div><h3>You are in!</h3><p>Check your email for your free resources. If you do not see them in 2 minutes, check your spam folder.</p>';
+    form.parentNode.insertBefore(success, form.nextSibling);
+  }
+}
