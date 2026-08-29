@@ -152,3 +152,58 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   .section { padding: 60px 0; }
   .section-header h2 { font-size: 1.8rem; }
 }
+
+/* === MOBILE FIXES === */
+
+/* Hero: reduce top padding on mobile (nav is shorter) */
+@media (max-width: 768px) {
+  .hero { padding: 120px 0 60px; }
+  .hero h1 { font-size: 2rem; line-height: 1.2; }
+  .hero-sub { font-size: 0.95rem; max-width: 100%; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; max-width: 300px; text-align: center; }
+  .hero-proof { gap: 12px; }
+  .proof-badge { font-size: 0.75rem; padding: 4px 12px; }
+
+  /* Section titles */
+  .section-title { font-size: 1.6rem; }
+  .section-desc { font-size: 0.95rem; }
+
+  /* Vault cards: reduce padding */
+  .vault-card { padding: 24px; }
+  .vault-card h3 { font-size: 1.1rem; }
+
+  /* Tool cards */
+  .tool-card { padding: 20px; }
+
+  /* Capture section on niche pages */
+  .capture-inner { padding: 0; }
+  .capture-form { width: 100%; }
+
+  /* Buttons: ensure they don't overflow */
+  .btn { padding: 12px 24px; font-size: 0.95rem; }
+  .btn-sm { padding: 8px 16px; font-size: 0.85rem; }
+
+  /* Footer */
+  .footer { padding: 40px 0 20px; }
+  .footer-inner { gap: 32px; }
+
+  /* Testimonials */
+  .testimonial-text { font-size: 0.9rem; }
+}
+
+/* Very small screens (320px) */
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+  .hero { padding: 100px 0 40px; }
+  .hero h1 { font-size: 1.7rem; }
+  .section { padding: 40px 0; }
+  .vault-card { padding: 20px; }
+  .tool-card { padding: 16px; }
+  .proof-badge { font-size: 0.7rem; padding: 3px 8px; }
+}
+
+/* === NICHE PAGE EXTRAS === */
+.niche-hero { padding-top: 140px; }
+.section-alt { background: rgba(255,255,255,0.02); }
+.btn-full { width: 100%; text-align: center; }
