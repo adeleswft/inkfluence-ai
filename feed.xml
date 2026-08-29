@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inkfluence AI Blog</title>
+    <description>Practical guides, prompt templates, and automation workflows for freelancers and creators using AI tools.</description>
+    <link>https://adeleswft.github.io/inkfluence-ai/blog.html</link>
+    <atom:link href="https://adeleswft.github.io/inkfluence-ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Best AI Tools for Solopreneurs in 2026 (Tested and Ranked)</title>
+      <link>https://adeleswft.github.io/inkfluence-ai/blog/ai-tools-solopreneurs.html</link>
+      <guid>https://adeleswft.github.io/inkfluence-ai/blog/ai-tools-solopreneurs.html</guid>
+      <pubDate>Wed, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>We tested 30+ AI tools so you do not have to. Here are the 10 that actually save time for solo business owners, ranked by real-world performance across writing, design, automation, and client management.</description>
+    </item>
+    <item>
+      <title>The 5-Minute Content Repurposing Workflow (One Post to 10 Platforms)</title>
+      <link>https://adeleswft.github.io/inkfluence-ai/blog/content-repurposing-workflow.html</link>
+      <guid>https://adeleswft.github.io/inkfluence-ai/blog/content-repurposing-workflow.html</guid>
+      <pubDate>Wed, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Turn a single blog post into tweets, LinkedIn updates, Instagram captions, email newsletters, and more using this AI-powered workflow with copy-paste prompts for each platform.</description>
+    </item>
+    <item>
+      <title>10 AI Prompts That Write Your Client Emails For You</title>
+      <link>https://adeleswft.github.io/inkfluence-ai/blog/ai-prompts-client-emails.html</link>
+      <guid>https://adeleswft.github.io/inkfluence-ai/blog/ai-prompts-client-emails.html</guid>
+      <pubDate>Wed, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Stop spending 30 minutes per client email. These 10 copy-paste AI prompts generate professional, personalized client emails in under 60 seconds. Works with ChatGPT, Claude, and more.</description>
+    </item>
+  </channel>
+</rss>
