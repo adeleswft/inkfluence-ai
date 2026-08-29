@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://adeleswft.github.io/inkfluence-ai/sitemap.xml
+Disallow: /admin.html
