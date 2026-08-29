@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://yourusername.github.io/inkfluence-ai/sitemap.xml
+Sitemap: https://adeleswft.github.io/inkfluence-ai/sitemap.xml

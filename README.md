@@ -4,7 +4,7 @@ Plug-and-play AI workflow templates and curated tool directory for freelancers, 
 
 ## Live Site
 
-**https://yourusername.github.io/inkfluence-ai/**
+**https://adeleswft.github.io/inkfluence-ai/**
 
 Replace `yourusername` and `inkfluence-ai` with your actual GitHub username and repo name.
 
