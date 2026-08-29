@@ -43,28 +43,35 @@ filterBtns.forEach(function(btn) {
   });
 });
 
-// Email capture form
-var form = document.getElementById('capture-form');
-var successMsg = document.getElementById('capture-success');
-
-if (form) {
+// Email capture form (works on all pages)
+document.querySelectorAll('.capture-form').forEach(function(form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Get form data
-    var name = document.getElementById('first-name').value;
-    var email = document.getElementById('email').value;
+    // Get form data from any inputs inside the form
+    var inputs = form.querySelectorAll('input');
+    var name = '';
+    var email = '';
+    inputs.forEach(function(input) {
+      if (input.type === 'email' || input.placeholder.indexOf('email') !== -1) email = input.value;
+      else name = input.value;
+    });
     var roleEl = document.getElementById('role');
     var role = roleEl ? roleEl.value : 'unknown';
 
     console.log('Form submitted:', { name: name, email: email, role: role });
 
-    // Show success message
+    // Show success message — find the next sibling or nearby success element
     form.style.display = 'none';
-    successMsg.classList.remove('hidden');
-
-    // TODO: Replace with real email provider integration
-    // Example MailerLite: POST to your form action URL
-    // Example Substack: redirect to your subscribe URL
+    var successMsg = document.getElementById('capture-success');
+    if (successMsg) {
+      successMsg.classList.remove('hidden');
+    } else {
+      // For niche pages: create a success message inline
+      var success = document.createElement('div');
+      success.className = 'capture-success';
+      success.innerHTML = '<div class="success-icon">\u2713</div><h3>You are in!</h3><p>Check your email for your free resources. If you do not see them in 2 minutes, check your spam folder.</p>';
+      form.parentNode.insertBefore(success, form.nextSibling);
+    }
   });
-}
+});
