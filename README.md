@@ -108,7 +108,7 @@ The form currently shows a success message on submit but does not send data anyw
 
 ### Add your Gumroad product link
 
-Search for `https://gumroad.com` in `index.html` and replace it with your actual product URL:
+Search for `https://adelewave77.gumroad.com/l/httpsadeleswftgithubioinkfluence-ai` in `index.html` and replace it with your actual product URL:
 
 ```html
 <a href="https://yourname.gumroad.com/l/your-product" ...>
