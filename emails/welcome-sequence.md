@@ -121,7 +121,7 @@ I put together a Pro System Bundle that includes:
 It is a one-time purchase of $29. No subscriptions, no upsells.
 
 If you want the complete operating system, here it is:
-[Your Gumroad link here]
+https://adelewave77.gumroad.com/l/httpsadeleswftgithubioinkfluence-ai
 
 No pressure. The free resources you already have are enough to get started. The Pro Bundle is for people who want the full toolkit in one place.
 
@@ -145,7 +145,7 @@ This is my last email in this welcome series. After this, you will only hear fro
 **1. The Pro Bundle is available**
 
 If you have been using the free resources and want the complete system, the Pro Bundle is here:
-[Your Gumroad link here]
+https://adelewave77.gumroad.com/l/httpsadeleswftgithubioinkfluence-ai
 
 $29 one-time. All prompt kits, templates, automation blueprints, and lifetime updates.
 
